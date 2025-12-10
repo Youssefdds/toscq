@@ -1,0 +1,54 @@
+description: VNFD for vm2
+imports:
+- ../types/custom_scaling_types.yaml
+- ../types/etsi_nfv_sol001_vnfd_types.yaml
+- ../types/etsi_nfv_sol001_common_types.yaml
+topology_template:
+  groups:
+    scaling_group_vm2:
+      properties:
+        max_instances: 3
+        min_instances: 1
+      type: tosca.groups.Scaling
+  node_templates:
+    vm2:
+      properties:
+        descriptor_id: vm2-desc
+        descriptor_version: 1.0
+        flavour_description: 1 vCPU, 2GB RAM
+        flavour_id: small
+        product_name: vm2
+        provider: ExampleProvider
+        software_version: 1.0
+        vnfm_info: vnfm_vm2
+      type: tosca.nodes.nfv.VDU
+  workflows:
+    declarative_deploy:
+      description: Deployment declarative workflow
+      steps:
+        deploy_vm2:
+          activities:
+          - delegate: deploy
+          target: vm2
+    declarative_undeploy:
+      description: Undeployment declarative workflow
+      steps:
+        undeploy_vm2:
+          activities:
+          - delegate: undeploy
+          target: vm2
+    parallel_deploy:
+      description: Parallel deployment declarative workflow
+      steps:
+        deploy_vm2:
+          activities:
+          - delegate: deploy
+          target: vm2
+    parallel_undeploy:
+      description: Parallel undeployment declarative workflow
+      steps:
+        undeploy_vm2:
+          activities:
+          - delegate: undeploy
+          target: vm2
+tosca_definitions_version: tosca_simple_yaml_1_3

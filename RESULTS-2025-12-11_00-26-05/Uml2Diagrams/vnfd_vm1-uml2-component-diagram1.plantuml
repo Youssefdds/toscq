@@ -1,0 +1,6 @@
+@startuml
+skinparam componentStyle uml2
+
+component "vm1: VDU" <<node>> as node_vm1
+
+@enduml

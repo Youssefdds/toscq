@@ -1,0 +1,81 @@
+
+[0;35m*** Descriptor files syntax checking ***[m
+
+[0;35m    ./NSD.YAML [m
+Translate ./nsd.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./nsd.yaml: TOSCA syntax checking
+[Info] ./nsd.yaml: No service template catalog to load.
+[Info] ./nsd.yaml: TOSCA type checking...
+[31m[ERROR] ./nsd.yaml@4,5:imports[0]:file: ../vnfd/vnfd_vm1.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@5,5:imports[1]:file: ../vnfd/vnfd_vm2.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@6,5:imports[2]:file: ../vnfd/vnfd_container.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@12,13:topology_template:node_templates:vnf_vm1:type: tosca.nodes.nfv.VNF - undefined type but node type expected![0m
+[31m[ERROR] ./nsd.yaml@14,11:topology_template:node_templates:vnf_vm1:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd.yaml@17,13:topology_template:node_templates:vnf_vm2:type: tosca.nodes.nfv.VNF - undefined type but node type expected![0m
+[31m[ERROR] ./nsd.yaml@19,11:topology_template:node_templates:vnf_vm2:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd.yaml@22,13:topology_template:node_templates:vnf_container:type: tosca.nodes.nfv.VNF - undefined type but node type expected![0m
+[31m[ERROR] ./nsd.yaml@24,11:topology_template:node_templates:vnf_container:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd.yaml@27,13:topology_template:node_templates:vl1:type: tosca.nodes.nfv.VL - undefined type but node type expected![0m
+[31m[ERROR] ./nsd.yaml@30,13:topology_template:node_templates:vl2:type: tosca.nodes.nfv.VL - undefined type but node type expected![0m
+[31m[ERROR] ./nsd.yaml@34,13:topology_template:groups:ns_scaling_group:type: tosca.groups.Scaling - undefined type but group type expected![0m
+[31m[ERROR] ./nsd.yaml@37,9:topology_template:groups:ns_scaling_group:properties:min_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./nsd.yaml@38,9:topology_template:groups:ns_scaling_group:properties:max_instances - undefined in tosca.groups.Scaling![0m
+[Info] ./nsd.yaml: TOSCA type checking done.
+[Info] ./nsd.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./nsd.yaml: - declarative_deploy workflow generated
+[Info] ./nsd.yaml: - declarative_undeploy workflow generated
+[Info] ./nsd.yaml: - parallel_deploy workflow generated
+[Info] ./nsd.yaml: - parallel_undeploy workflow generated
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/ created.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml opened.
+[Info] ./nsd.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./nsd.yaml: Alloy Generator - generation...
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Alloy/ created.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Alloy/nsd.als opened.
+[31m[ERROR] ./nsd.yaml@12,13:topology_template:node_templates:vnf_vm1:type: tosca.nodes.nfv.VNF undefined![0m
+[31m[ERROR] ./nsd.yaml@17,13:topology_template:node_templates:vnf_vm2:type: tosca.nodes.nfv.VNF undefined![0m
+[31m[ERROR] ./nsd.yaml@22,13:topology_template:node_templates:vnf_container:type: tosca.nodes.nfv.VNF undefined![0m
+[31m[ERROR] ./nsd.yaml@27,13:topology_template:node_templates:vl1:type: tosca.nodes.nfv.VL undefined![0m
+[31m[ERROR] ./nsd.yaml@30,13:topology_template:node_templates:vl2:type: tosca.nodes.nfv.VL undefined![0m
+[31m[ERROR] ./nsd.yaml@34,13:topology_template:groups:ns_scaling_group:type: tosca.groups.Scaling undefined![0m
+[31m[ERROR] ./nsd.yaml@14,15:topology_template:node_templates:vnf_vm1:vl - requirement undefined![0m
+[31m[ERROR] ./nsd.yaml@27,7:topology_template:node_templates:vnf_vm1:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd.yaml@19,15:topology_template:node_templates:vnf_vm2:vl - requirement undefined![0m
+[31m[ERROR] ./nsd.yaml@27,7:topology_template:node_templates:vnf_vm2:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd.yaml@24,15:topology_template:node_templates:vnf_container:vl - requirement undefined![0m
+[31m[ERROR] ./nsd.yaml@30,7:topology_template:node_templates:vnf_container:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd.yaml@37,9:topology_template:groups:ns_scaling_group:properties: property 'min_instances' unknown![0m
+[31m[ERROR] ./nsd.yaml@38,9:topology_template:groups:ns_scaling_group:properties: property 'max_instances' unknown![0m
+[ERROR] [31m'tosca_nodes_nfv_VNF'[0m
+[ERROR] [31m'tosca_nodes_nfv_VNF'[0m
+[ERROR] [31m'tosca_nodes_nfv_VNF'[0m
+[ERROR] [31m'tosca_nodes_nfv_VL'[0m
+[ERROR] [31m'tosca_nodes_nfv_VL'[0m
+[ERROR] [31m'tosca_groups_Scaling'[0m
+[31m[ERROR] ./nsd.yaml@4,5:imports[0]: ../vnfd/vnfd_vm1.yaml: No such file: vnfd_vm1.yaml![0m
+[31m[ERROR] ./nsd.yaml@5,5:imports[1]: ../vnfd/vnfd_vm2.yaml: No such file: vnfd_vm2.yaml![0m
+[31m[ERROR] ./nsd.yaml@6,5:imports[2]: ../vnfd/vnfd_container.yaml: No such file: vnfd_container.yaml![0m
+[Info] ./nsd.yaml: Alloy Generator - generation done.
+[Info] ./nsd.yaml: UML2 Diagram Generator - generation...
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/ created.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/nsd-uml2-component-diagram1.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/nsd-uml2-component-diagram2.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/nsd-uml2-deployment-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/nsd-declarative_deploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/nsd-declarative_undeploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/nsd-parallel_deploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/Uml2Diagrams/nsd-parallel_undeploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: UML2 Diagram Generator - generation done.
+[Info] ./nsd.yaml: Network Diagram Generator - generation...
+[Info] ./nsd.yaml: No network diagram generated.
+[Info] ./nsd.yaml: Network Diagram Generator - generation done.
+[Info] ./nsd.yaml: TOSCA Diagram Generator - generation...
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/ToscaDiagrams/ created.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-18-08/ToscaDiagrams/nsd.dot opened.
+[31m[ERROR] ./nsd.yaml@14,11:vl: capability undefined![0m
+[31m[ERROR] ./nsd.yaml@19,11:vl: capability undefined![0m
+[31m[ERROR] ./nsd.yaml@24,11:vl: capability undefined![0m
+[Info] ./nsd.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./nsd.yaml: HOT Generator - generation...
+[Info] ./nsd.yaml: HOT Generator - generation done.

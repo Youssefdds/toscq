@@ -1,0 +1,8 @@
+graph ToscaDiagram {
+  rankdir="LR"
+    subgraph clustervm1 {
+      color=white
+      label=""
+      vm1[label="vm1: VDU|\l\l\l\l" shape=record style=rounded]
+    }
+}

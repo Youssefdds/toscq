@@ -1,0 +1,7 @@
+@startuml
+skinparam componentStyle uml2
+allowmixing
+
+component "podA: Application" as node_podA
+component "podB: Application" as node_podB
+@enduml

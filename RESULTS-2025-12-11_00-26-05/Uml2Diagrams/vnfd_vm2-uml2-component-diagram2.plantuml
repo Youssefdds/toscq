@@ -1,0 +1,9 @@
+@startuml
+skinparam componentStyle uml2
+skinparam component {
+  backgroundColor<<relationship>> White
+}
+
+component "vm2: VDU" <<node>> as node_vm2
+
+@enduml

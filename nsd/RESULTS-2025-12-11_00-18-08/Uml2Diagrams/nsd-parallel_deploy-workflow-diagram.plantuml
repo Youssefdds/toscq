@@ -1,0 +1,48 @@
+@startuml
+hide empty description
+skinparam shadowing false
+skinparam state {
+  ArrowColor blue
+  BorderColor blue
+  EndColor black
+  StartColor green
+  BackGroundColor<< step >> white
+  BorderColor<< step >> black
+  BackGroundColor<< delegate >> lightgrey
+  BackGroundColor<< set_state >> white
+  BackGroundColor<< call_operation >> lightblue
+  BackGroundColor<< inline >> white
+}
+skinparam ActivityBarColor<<fork>> DarkGreen
+skinparam ActivityBarColor<<join>> DarkOrange
+
+state "deploy_vnf_vm1" as step_parallel_deploy_deploy_vnf_vm1 << step >> {
+  state "vnf_vm1 deploy" as step_parallel_deploy_deploy_vnf_vm1_vnf_vm1_deploy << delegate >>
+}
+state "deploy_vnf_vm2" as step_parallel_deploy_deploy_vnf_vm2 << step >> {
+  state "vnf_vm2 deploy" as step_parallel_deploy_deploy_vnf_vm2_vnf_vm2_deploy << delegate >>
+}
+state "deploy_vnf_container" as step_parallel_deploy_deploy_vnf_container << step >> {
+  state "vnf_container deploy" as step_parallel_deploy_deploy_vnf_container_vnf_container_deploy << delegate >>
+}
+state "deploy_vl1" as step_parallel_deploy_deploy_vl1 << step >> {
+  state "vl1 deploy" as step_parallel_deploy_deploy_vl1_vl1_deploy << delegate >>
+}
+state "deploy_vl2" as step_parallel_deploy_deploy_vl2 << step >> {
+  state "vl2 deploy" as step_parallel_deploy_deploy_vl2_vl2_deploy << delegate >>
+}
+state parallel_deploy_fork <<fork>>
+[*] --> parallel_deploy_fork
+parallel_deploy_fork --> step_parallel_deploy_deploy_vnf_vm1
+parallel_deploy_fork --> step_parallel_deploy_deploy_vnf_vm2
+parallel_deploy_fork --> step_parallel_deploy_deploy_vnf_container
+parallel_deploy_fork --> step_parallel_deploy_deploy_vl1
+parallel_deploy_fork --> step_parallel_deploy_deploy_vl2
+state parallel_deploy_join <<join>>
+parallel_deploy_join --> [*]
+step_parallel_deploy_deploy_vnf_vm1 --> parallel_deploy_join
+step_parallel_deploy_deploy_vnf_vm2 --> parallel_deploy_join
+step_parallel_deploy_deploy_vnf_container --> parallel_deploy_join
+step_parallel_deploy_deploy_vl1 --> parallel_deploy_join
+step_parallel_deploy_deploy_vl2 --> parallel_deploy_join
+@enduml

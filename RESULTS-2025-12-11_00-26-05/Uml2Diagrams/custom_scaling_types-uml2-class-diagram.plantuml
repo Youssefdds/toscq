@@ -1,0 +1,10 @@
+@startuml
+set namespaceSeparator none
+class "tosca.groups.Root" << (G,green) >> #DDDDDD
+"tosca.groups.Root" <|-- "tosca.groups.Scaling"
+class "tosca.groups.Scaling" << (G,green) >> {
+.. properties ..
++<b>min_instances : integer
++<b>max_instances : integer
+}
+@enduml

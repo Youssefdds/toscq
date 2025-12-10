@@ -1,0 +1,219 @@
+imports:
+- file: ../types/etsi_nfv_sol001_common_types.yaml
+- file: ../types/etsi_nfv_sol001_vnfd_types.yaml
+- file: ../types/custom_scaling_types.yaml
+- file: ../types/custom_scaling_types.yaml
+- file: ../types/custom_scaling_types.yaml
+topology_template:
+  groups:
+    scaling_group_cont:
+      members:
+      - podA
+      - podB
+      properties:
+        max_instances: 5
+        min_instances: 1
+      type: tosca.groups.Scaling
+  node_templates:
+    podA:
+      type: tosca.nodes.Container.Application
+    podB:
+      type: tosca.nodes.Container.Application
+  workflows:
+    declarative_deploy:
+      description: Deployment declarative workflow
+      steps:
+        configure_podA:
+          activities:
+          - call_operation: Standard.configure
+          on_success:
+          - post_configure_podA
+          target: podA
+        configure_podB:
+          activities:
+          - call_operation: Standard.configure
+          on_success:
+          - post_configure_podB
+          target: podB
+        create_podA:
+          activities:
+          - set_state: creating
+          - call_operation: Standard.create
+          - set_state: created
+          on_success:
+          - pre_configure_podA
+          target: podA
+        create_podB:
+          activities:
+          - set_state: creating
+          - call_operation: Standard.create
+          - set_state: created
+          on_success:
+          - pre_configure_podB
+          target: podB
+        post_configure_podA:
+          activities:
+          - set_state: configured
+          on_success:
+          - start_podA
+          target: podA
+        post_configure_podB:
+          activities:
+          - set_state: configured
+          on_success:
+          - start_podB
+          target: podB
+        pre_configure_podA:
+          activities:
+          - set_state: configuring
+          on_success:
+          - configure_podA
+          target: podA
+        pre_configure_podB:
+          activities:
+          - set_state: configuring
+          on_success:
+          - configure_podB
+          target: podB
+        start_podA:
+          activities:
+          - set_state: starting
+          - call_operation: Standard.start
+          - set_state: started
+          target: podA
+        start_podB:
+          activities:
+          - set_state: starting
+          - call_operation: Standard.start
+          - set_state: started
+          target: podB
+    declarative_undeploy:
+      description: Undeployment declarative workflow
+      steps:
+        delete_podA:
+          activities:
+          - set_state: deleting
+          - call_operation: Standard.delete
+          - set_state: initial
+          target: podA
+        delete_podB:
+          activities:
+          - set_state: deleting
+          - call_operation: Standard.delete
+          - set_state: initial
+          target: podB
+        stop_podA:
+          activities:
+          - set_state: stopping
+          - call_operation: Standard.stop
+          - set_state: stopped
+          on_success:
+          - delete_podA
+          target: podA
+        stop_podB:
+          activities:
+          - set_state: stopping
+          - call_operation: Standard.stop
+          - set_state: stopped
+          on_success:
+          - delete_podB
+          target: podB
+    parallel_deploy:
+      description: Parallel deployment declarative workflow
+      steps:
+        configure_podA:
+          activities:
+          - call_operation: Standard.configure
+          on_success:
+          - post_configure_podA
+          target: podA
+        configure_podB:
+          activities:
+          - call_operation: Standard.configure
+          on_success:
+          - post_configure_podB
+          target: podB
+        create_podA:
+          activities:
+          - set_state: creating
+          - call_operation: Standard.create
+          - set_state: created
+          on_success:
+          - pre_configure_podA
+          target: podA
+        create_podB:
+          activities:
+          - set_state: creating
+          - call_operation: Standard.create
+          - set_state: created
+          on_success:
+          - pre_configure_podB
+          target: podB
+        post_configure_podA:
+          activities:
+          - set_state: configured
+          on_success:
+          - start_podA
+          target: podA
+        post_configure_podB:
+          activities:
+          - set_state: configured
+          on_success:
+          - start_podB
+          target: podB
+        pre_configure_podA:
+          activities:
+          - set_state: configuring
+          on_success:
+          - configure_podA
+          target: podA
+        pre_configure_podB:
+          activities:
+          - set_state: configuring
+          on_success:
+          - configure_podB
+          target: podB
+        start_podA:
+          activities:
+          - set_state: starting
+          - call_operation: Standard.start
+          - set_state: started
+          target: podA
+        start_podB:
+          activities:
+          - set_state: starting
+          - call_operation: Standard.start
+          - set_state: started
+          target: podB
+    parallel_undeploy:
+      description: Parallel undeployment declarative workflow
+      steps:
+        delete_podA:
+          activities:
+          - set_state: deleting
+          - call_operation: Standard.delete
+          - set_state: initial
+          target: podA
+        delete_podB:
+          activities:
+          - set_state: deleting
+          - call_operation: Standard.delete
+          - set_state: initial
+          target: podB
+        stop_podA:
+          activities:
+          - set_state: stopping
+          - call_operation: Standard.stop
+          - set_state: stopped
+          on_success:
+          - delete_podA
+          target: podA
+        stop_podB:
+          activities:
+          - set_state: stopping
+          - call_operation: Standard.stop
+          - set_state: stopped
+          on_success:
+          - delete_podB
+          target: podB
+tosca_definitions_version: tosca_simple_yaml_1_3

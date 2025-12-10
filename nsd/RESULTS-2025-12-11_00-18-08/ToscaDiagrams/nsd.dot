@@ -1,0 +1,28 @@
+graph ToscaDiagram {
+  rankdir="LR"
+    subgraph clustervnf_vm1 {
+      color=white
+      label=""
+      vnf_vm1[label="vnf_vm1: VNF|\l\l\l\l" shape=record style=rounded]
+    }
+    subgraph clustervnf_vm2 {
+      color=white
+      label=""
+      vnf_vm2[label="vnf_vm2: VNF|\l\l\l\l" shape=record style=rounded]
+    }
+    subgraph clustervnf_container {
+      color=white
+      label=""
+      vnf_container[label="vnf_container: VNF|\l\l\l\l" shape=record style=rounded]
+    }
+    subgraph clustervl1 {
+      color=white
+      label=""
+      vl1[label="vl1: VL|\l\l\l\l" shape=record style=rounded]
+    }
+    subgraph clustervl2 {
+      color=white
+      label=""
+      vl2[label="vl2: VL|\l\l\l\l" shape=record style=rounded]
+    }
+}

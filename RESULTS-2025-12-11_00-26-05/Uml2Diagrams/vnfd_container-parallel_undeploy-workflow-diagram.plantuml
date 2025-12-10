@@ -1,0 +1,57 @@
+@startuml
+hide empty description
+skinparam shadowing false
+skinparam state {
+  ArrowColor blue
+  BorderColor blue
+  EndColor black
+  StartColor green
+  BackGroundColor<< step >> white
+  BorderColor<< step >> black
+  BackGroundColor<< delegate >> lightgrey
+  BackGroundColor<< set_state >> white
+  BackGroundColor<< call_operation >> lightblue
+  BackGroundColor<< inline >> white
+}
+skinparam ActivityBarColor<<fork>> DarkGreen
+skinparam ActivityBarColor<<join>> DarkOrange
+
+state "stop_podA" as step_parallel_undeploy_stop_podA << step >> {
+  state "podA stopping" as step_parallel_undeploy_stop_podA_podA_stopping << set_state >>
+  state "podA Standard.stop" as step_parallel_undeploy_stop_podA_podA_Standard.stop << call_operation >>
+  state "podA stopped" as step_parallel_undeploy_stop_podA_podA_stopped << set_state >>
+  step_parallel_undeploy_stop_podA_podA_stopping --> step_parallel_undeploy_stop_podA_podA_Standard.stop
+  step_parallel_undeploy_stop_podA_podA_Standard.stop --> step_parallel_undeploy_stop_podA_podA_stopped
+}
+state "delete_podA" as step_parallel_undeploy_delete_podA << step >> {
+  state "podA deleting" as step_parallel_undeploy_delete_podA_podA_deleting << set_state >>
+  state "podA Standard.delete" as step_parallel_undeploy_delete_podA_podA_Standard.delete << call_operation >>
+  state "podA initial" as step_parallel_undeploy_delete_podA_podA_initial << set_state >>
+  step_parallel_undeploy_delete_podA_podA_deleting --> step_parallel_undeploy_delete_podA_podA_Standard.delete
+  step_parallel_undeploy_delete_podA_podA_Standard.delete --> step_parallel_undeploy_delete_podA_podA_initial
+}
+state "stop_podB" as step_parallel_undeploy_stop_podB << step >> {
+  state "podB stopping" as step_parallel_undeploy_stop_podB_podB_stopping << set_state >>
+  state "podB Standard.stop" as step_parallel_undeploy_stop_podB_podB_Standard.stop << call_operation >>
+  state "podB stopped" as step_parallel_undeploy_stop_podB_podB_stopped << set_state >>
+  step_parallel_undeploy_stop_podB_podB_stopping --> step_parallel_undeploy_stop_podB_podB_Standard.stop
+  step_parallel_undeploy_stop_podB_podB_Standard.stop --> step_parallel_undeploy_stop_podB_podB_stopped
+}
+state "delete_podB" as step_parallel_undeploy_delete_podB << step >> {
+  state "podB deleting" as step_parallel_undeploy_delete_podB_podB_deleting << set_state >>
+  state "podB Standard.delete" as step_parallel_undeploy_delete_podB_podB_Standard.delete << call_operation >>
+  state "podB initial" as step_parallel_undeploy_delete_podB_podB_initial << set_state >>
+  step_parallel_undeploy_delete_podB_podB_deleting --> step_parallel_undeploy_delete_podB_podB_Standard.delete
+  step_parallel_undeploy_delete_podB_podB_Standard.delete --> step_parallel_undeploy_delete_podB_podB_initial
+}
+step_parallel_undeploy_stop_podA --> step_parallel_undeploy_delete_podA
+step_parallel_undeploy_stop_podB --> step_parallel_undeploy_delete_podB
+state parallel_undeploy_fork <<fork>>
+[*] --> parallel_undeploy_fork
+parallel_undeploy_fork --> step_parallel_undeploy_stop_podA
+parallel_undeploy_fork --> step_parallel_undeploy_stop_podB
+state parallel_undeploy_join <<join>>
+parallel_undeploy_join --> [*]
+step_parallel_undeploy_delete_podA --> parallel_undeploy_join
+step_parallel_undeploy_delete_podB --> parallel_undeploy_join
+@enduml

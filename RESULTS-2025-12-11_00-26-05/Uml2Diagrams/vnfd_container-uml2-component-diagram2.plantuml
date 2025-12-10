@@ -1,0 +1,11 @@
+@startuml
+skinparam componentStyle uml2
+skinparam component {
+  backgroundColor<<relationship>> White
+}
+
+component "podA: Application" <<node>> as node_podA
+
+component "podB: Application" <<node>> as node_podB
+
+@enduml

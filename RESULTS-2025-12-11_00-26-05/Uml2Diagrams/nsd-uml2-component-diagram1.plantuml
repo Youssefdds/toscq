@@ -1,0 +1,14 @@
+@startuml
+skinparam componentStyle uml2
+
+component "vl1: VL" <<node>> as node_vl1
+
+component "vl2: VL" <<node>> as node_vl2
+
+component "vnf_container: VNF" <<node>> as node_vnf_container
+
+component "vnf_vm1: VNF" <<node>> as node_vnf_vm1
+
+component "vnf_vm2: VNF" <<node>> as node_vnf_vm2
+
+@enduml

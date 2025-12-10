@@ -1,0 +1,24 @@
+@startuml
+hide empty description
+skinparam shadowing false
+skinparam state {
+  ArrowColor blue
+  BorderColor blue
+  EndColor black
+  StartColor green
+  BackGroundColor<< step >> white
+  BorderColor<< step >> black
+  BackGroundColor<< delegate >> lightgrey
+  BackGroundColor<< set_state >> white
+  BackGroundColor<< call_operation >> lightblue
+  BackGroundColor<< inline >> white
+}
+skinparam ActivityBarColor<<fork>> DarkGreen
+skinparam ActivityBarColor<<join>> DarkOrange
+
+state "deploy_vm1" as step_declarative_deploy_deploy_vm1 << step >> {
+  state "vm1 deploy" as step_declarative_deploy_deploy_vm1_vm1_deploy << delegate >>
+}
+[*] --> step_declarative_deploy_deploy_vm1
+step_declarative_deploy_deploy_vm1 --> [*]
+@enduml

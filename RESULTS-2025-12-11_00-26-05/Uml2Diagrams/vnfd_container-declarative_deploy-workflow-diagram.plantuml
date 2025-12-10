@@ -1,0 +1,81 @@
+@startuml
+hide empty description
+skinparam shadowing false
+skinparam state {
+  ArrowColor blue
+  BorderColor blue
+  EndColor black
+  StartColor green
+  BackGroundColor<< step >> white
+  BorderColor<< step >> black
+  BackGroundColor<< delegate >> lightgrey
+  BackGroundColor<< set_state >> white
+  BackGroundColor<< call_operation >> lightblue
+  BackGroundColor<< inline >> white
+}
+skinparam ActivityBarColor<<fork>> DarkGreen
+skinparam ActivityBarColor<<join>> DarkOrange
+
+state "create_podA" as step_declarative_deploy_create_podA << step >> {
+  state "podA creating" as step_declarative_deploy_create_podA_podA_creating << set_state >>
+  state "podA Standard.create" as step_declarative_deploy_create_podA_podA_Standard.create << call_operation >>
+  state "podA created" as step_declarative_deploy_create_podA_podA_created << set_state >>
+  step_declarative_deploy_create_podA_podA_creating --> step_declarative_deploy_create_podA_podA_Standard.create
+  step_declarative_deploy_create_podA_podA_Standard.create --> step_declarative_deploy_create_podA_podA_created
+}
+state "pre_configure_podA" as step_declarative_deploy_pre_configure_podA << step >> {
+  state "podA configuring" as step_declarative_deploy_pre_configure_podA_podA_configuring << set_state >>
+}
+state "configure_podA" as step_declarative_deploy_configure_podA << step >> {
+  state "podA Standard.configure" as step_declarative_deploy_configure_podA_podA_Standard.configure << call_operation >>
+}
+state "post_configure_podA" as step_declarative_deploy_post_configure_podA << step >> {
+  state "podA configured" as step_declarative_deploy_post_configure_podA_podA_configured << set_state >>
+}
+state "start_podA" as step_declarative_deploy_start_podA << step >> {
+  state "podA starting" as step_declarative_deploy_start_podA_podA_starting << set_state >>
+  state "podA Standard.start" as step_declarative_deploy_start_podA_podA_Standard.start << call_operation >>
+  state "podA started" as step_declarative_deploy_start_podA_podA_started << set_state >>
+  step_declarative_deploy_start_podA_podA_starting --> step_declarative_deploy_start_podA_podA_Standard.start
+  step_declarative_deploy_start_podA_podA_Standard.start --> step_declarative_deploy_start_podA_podA_started
+}
+state "create_podB" as step_declarative_deploy_create_podB << step >> {
+  state "podB creating" as step_declarative_deploy_create_podB_podB_creating << set_state >>
+  state "podB Standard.create" as step_declarative_deploy_create_podB_podB_Standard.create << call_operation >>
+  state "podB created" as step_declarative_deploy_create_podB_podB_created << set_state >>
+  step_declarative_deploy_create_podB_podB_creating --> step_declarative_deploy_create_podB_podB_Standard.create
+  step_declarative_deploy_create_podB_podB_Standard.create --> step_declarative_deploy_create_podB_podB_created
+}
+state "pre_configure_podB" as step_declarative_deploy_pre_configure_podB << step >> {
+  state "podB configuring" as step_declarative_deploy_pre_configure_podB_podB_configuring << set_state >>
+}
+state "configure_podB" as step_declarative_deploy_configure_podB << step >> {
+  state "podB Standard.configure" as step_declarative_deploy_configure_podB_podB_Standard.configure << call_operation >>
+}
+state "post_configure_podB" as step_declarative_deploy_post_configure_podB << step >> {
+  state "podB configured" as step_declarative_deploy_post_configure_podB_podB_configured << set_state >>
+}
+state "start_podB" as step_declarative_deploy_start_podB << step >> {
+  state "podB starting" as step_declarative_deploy_start_podB_podB_starting << set_state >>
+  state "podB Standard.start" as step_declarative_deploy_start_podB_podB_Standard.start << call_operation >>
+  state "podB started" as step_declarative_deploy_start_podB_podB_started << set_state >>
+  step_declarative_deploy_start_podB_podB_starting --> step_declarative_deploy_start_podB_podB_Standard.start
+  step_declarative_deploy_start_podB_podB_Standard.start --> step_declarative_deploy_start_podB_podB_started
+}
+step_declarative_deploy_create_podA --> step_declarative_deploy_pre_configure_podA
+step_declarative_deploy_pre_configure_podA --> step_declarative_deploy_configure_podA
+step_declarative_deploy_configure_podA --> step_declarative_deploy_post_configure_podA
+step_declarative_deploy_post_configure_podA --> step_declarative_deploy_start_podA
+step_declarative_deploy_create_podB --> step_declarative_deploy_pre_configure_podB
+step_declarative_deploy_pre_configure_podB --> step_declarative_deploy_configure_podB
+step_declarative_deploy_configure_podB --> step_declarative_deploy_post_configure_podB
+step_declarative_deploy_post_configure_podB --> step_declarative_deploy_start_podB
+state declarative_deploy_fork <<fork>>
+[*] --> declarative_deploy_fork
+declarative_deploy_fork --> step_declarative_deploy_create_podA
+declarative_deploy_fork --> step_declarative_deploy_create_podB
+state declarative_deploy_join <<join>>
+declarative_deploy_join --> [*]
+step_declarative_deploy_start_podA --> declarative_deploy_join
+step_declarative_deploy_start_podB --> declarative_deploy_join
+@enduml

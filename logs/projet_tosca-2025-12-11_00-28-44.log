@@ -1,0 +1,455 @@
+
+[0;35m*** Descriptor files syntax checking ***[m
+
+[0;35m    ./TYPES/ETSI_NFV_SOL001_NSD_TYPES.YAML [m
+Translate ./types/etsi_nfv_sol001_nsd_types.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: TOSCA syntax checking
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: No service template catalog to load.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: TOSCA type checking...
+[33m[Warning] ./types/etsi_nfv_sol001_nsd_types.yaml@80,15:data_types:tosca.datatypes.nfv.Mask:properties:starting_point:type: integer - no constraints then negative values allowed![0m
+[33m[Warning] ./types/etsi_nfv_sol001_nsd_types.yaml@84,15:data_types:tosca.datatypes.nfv.Mask:properties:length:type: integer - no constraints then negative values allowed![0m
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: TOSCA type checking done.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: no topology template to process
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: Alloy Generator - generation...
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: RESULTS-2025-12-11_00-26-05/Alloy/etsi_nfv_sol001_nsd_types_3_3_1.als opened.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: Alloy Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: UML2 Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/etsi_nfv_sol001_nsd_types-3.3.1-uml2-class-diagram.plantuml opened.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: UML2 Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: Network Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: No topology template so no network diagram generated.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: Network Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: TOSCA Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: HOT Generator - generation...
+[Info] ./types/etsi_nfv_sol001_nsd_types.yaml: HOT Generator - generation done.
+
+[0;35m    ./TYPES/ETSI_NFV_SOL001_COMMON_TYPES.YAML [m
+Translate ./types/etsi_nfv_sol001_common_types.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: TOSCA syntax checking
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: No service template catalog to load.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: TOSCA type checking...
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: TOSCA type checking done.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: no topology template to process
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: Alloy Generator - generation...
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: RESULTS-2025-12-11_00-26-05/Alloy/etsi_nfv_sol001_common_types_3_3_1.als opened.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml@163,26: data_types:tosca.datatypes.nfv.Qos:properties:packet_loss_ratio:constraints:in_range[0]: 0.0 - float mapped to an Alloy string
+[Info] ./types/etsi_nfv_sol001_common_types.yaml@163,31: data_types:tosca.datatypes.nfv.Qos:properties:packet_loss_ratio:constraints:in_range[1]: 1.0 - float mapped to an Alloy string
+[Info] ./types/etsi_nfv_sol001_common_types.yaml@272,28: policy_types:tosca.policies.nfv.Abstract.SecurityGroupRule:properties:port_range_min:constraints:less_or_equal: 65535 - integer narrowed to 127
+[Info] ./types/etsi_nfv_sol001_common_types.yaml@280,28: policy_types:tosca.policies.nfv.Abstract.SecurityGroupRule:properties:port_range_max:constraints:less_or_equal: 65535 - integer narrowed to 127
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: Alloy Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: UML2 Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/etsi_nfv_sol001_common_types-3.3.1-uml2-class-diagram.plantuml opened.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: UML2 Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: Network Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: No topology template so no network diagram generated.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: Network Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: TOSCA Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: HOT Generator - generation...
+[Info] ./types/etsi_nfv_sol001_common_types.yaml: HOT Generator - generation done.
+
+[0;35m    ./TYPES/ETSI_NFV_SOL001_PNFD_TYPES.YAML [m
+Translate ./types/etsi_nfv_sol001_pnfd_types.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: TOSCA syntax checking
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: No service template catalog to load.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: TOSCA type checking...
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: TOSCA type checking done.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: no topology template to process
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: Alloy Generator - generation...
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: RESULTS-2025-12-11_00-26-05/Alloy/etsi_nfv_sol001_pnfd_types_3_3_1.als opened.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: Alloy Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: UML2 Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/etsi_nfv_sol001_pnfd_types-3.3.1-uml2-class-diagram.plantuml opened.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: UML2 Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: Network Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: No topology template so no network diagram generated.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: Network Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: TOSCA Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: HOT Generator - generation...
+[Info] ./types/etsi_nfv_sol001_pnfd_types.yaml: HOT Generator - generation done.
+
+[0;35m    ./TYPES/ETSI_NFV_SOL001_VNFD_TYPES.YAML [m
+Translate ./types/etsi_nfv_sol001_vnfd_types.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: TOSCA syntax checking
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: No service template catalog to load.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: TOSCA type checking...
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: TOSCA type checking done.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: no topology template to process
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: Alloy Generator - generation...
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: RESULTS-2025-12-11_00-26-05/Alloy/etsi_nfv_sol001_vnfd_types_3_3_1.als opened.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: Alloy Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: UML2 Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/etsi_nfv_sol001_vnfd_types-3.3.1-uml2-class-diagram.plantuml opened.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: UML2 Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: Network Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: No topology template so no network diagram generated.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: Network Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: TOSCA Diagram Generator - generation...
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: HOT Generator - generation...
+[Info] ./types/etsi_nfv_sol001_vnfd_types.yaml: HOT Generator - generation done.
+
+[0;35m    ./VNFD/VNFD_VM1.YAML [m
+Translate ./vnfd/vnfd_vm1.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./vnfd/vnfd_vm1.yaml: TOSCA syntax checking
+[Info] ./vnfd/vnfd_vm1.yaml: No service template catalog to load.
+[Info] ./vnfd/vnfd_vm1.yaml: TOSCA type checking...
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@3,5:imports[0]:file: ../../types/etsi_nfv_sol001_common_types.yaml - file not found![0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@4,5:imports[1]:file: ../../types/etsi_nfv_sol001_vnfd_types.yaml - file not found![0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@17,13:topology_template:groups:scaling_group_vm1:type: tosca.groups.Scaling - undefined type but group type expected![0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@20,9:topology_template:groups:scaling_group_vm1:properties:min_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@21,9:topology_template:groups:scaling_group_vm1:properties:max_instances - undefined in tosca.groups.Scaling![0m
+[Info] ./vnfd/vnfd_vm1.yaml: TOSCA type checking done.
+[Info] ./vnfd/vnfd_vm1.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./vnfd/vnfd_vm1.yaml: - declarative_deploy workflow generated
+[Info] ./vnfd/vnfd_vm1.yaml: - declarative_undeploy workflow generated
+[Info] ./vnfd/vnfd_vm1.yaml: - parallel_deploy workflow generated
+[Info] ./vnfd/vnfd_vm1.yaml: - parallel_undeploy workflow generated
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/DeclarativeWorkflows/vnfd_vm1.yaml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./vnfd/vnfd_vm1.yaml: Alloy Generator - generation...
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Alloy/vnfd_vm1.als opened.
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@17,13:topology_template:groups:scaling_group_vm1:type: tosca.groups.Scaling undefined![0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@20,9:topology_template:groups:scaling_group_vm1:properties: property 'min_instances' unknown![0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@21,9:topology_template:groups:scaling_group_vm1:properties: property 'max_instances' unknown![0m
+[ERROR] [31m'tosca_groups_Scaling'[0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@3,5:imports[0]: ../../types/etsi_nfv_sol001_common_types.yaml: No such file: etsi_nfv_sol001_common_types.yaml![0m
+[31m[ERROR] ./vnfd/vnfd_vm1.yaml@4,5:imports[1]: ../../types/etsi_nfv_sol001_vnfd_types.yaml: No such file: etsi_nfv_sol001_vnfd_types.yaml![0m
+[Info] ./vnfd/vnfd_vm1.yaml: Alloy Generator - generation done.
+[Info] ./vnfd/vnfd_vm1.yaml: UML2 Diagram Generator - generation...
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm1-uml2-component-diagram1.plantuml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm1-uml2-component-diagram2.plantuml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm1-uml2-deployment-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm1-declarative_deploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm1-declarative_undeploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm1-parallel_deploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm1-parallel_undeploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm1.yaml: UML2 Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_vm1.yaml: Network Diagram Generator - generation...
+[Info] ./vnfd/vnfd_vm1.yaml: No network diagram generated.
+[Info] ./vnfd/vnfd_vm1.yaml: Network Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_vm1.yaml: TOSCA Diagram Generator - generation...
+[Info] ./vnfd/vnfd_vm1.yaml: RESULTS-2025-12-11_00-26-05/ToscaDiagrams/vnfd_vm1.dot opened.
+[Info] ./vnfd/vnfd_vm1.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_vm1.yaml: HOT Generator - generation...
+[Info] ./vnfd/vnfd_vm1.yaml: HOT Generator - generation done.
+
+[0;35m    ./VNFD/VNFD_CONTAINER.YAML [m
+Translate ./vnfd/vnfd_container.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./vnfd/vnfd_container.yaml: TOSCA syntax checking
+[Info] ./vnfd/vnfd_container.yaml: No service template catalog to load.
+[Info] ./vnfd/vnfd_container.yaml: TOSCA type checking...
+[31m[ERROR] ./vnfd/vnfd_container.yaml@3,5:imports[0]:file: ../../types/etsi_nfv_sol001_common_types.yaml - file not found![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@4,5:imports[1]:file: ../../types/etsi_nfv_sol001_vnfd_types.yaml - file not found![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@17,13:topology_template:groups:scaling_group_cont:type: tosca.groups.Scaling - undefined type but group type expected![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@20,9:topology_template:groups:scaling_group_cont:properties:min_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@21,9:topology_template:groups:scaling_group_cont:properties:max_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml:topology_template:node_templates:podA:requirements:host - no node template matching tosca.nodes.Container.Runtime![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml:topology_template:node_templates:podA:requirements:network - no node template matching tosca.nodes.network.Network![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml:topology_template:node_templates:podB:requirements:host - no node template matching tosca.nodes.Container.Runtime![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml:topology_template:node_templates:podB:requirements:network - no node template matching tosca.nodes.network.Network![0m
+[Info] ./vnfd/vnfd_container.yaml: TOSCA type checking done.
+[Info] ./vnfd/vnfd_container.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./vnfd/vnfd_container.yaml: - declarative_deploy workflow generated
+[Info] ./vnfd/vnfd_container.yaml: - declarative_undeploy workflow generated
+[Info] ./vnfd/vnfd_container.yaml: - parallel_deploy workflow generated
+[Info] ./vnfd/vnfd_container.yaml: - parallel_undeploy workflow generated
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/DeclarativeWorkflows/vnfd_container.yaml opened.
+[Info] ./vnfd/vnfd_container.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./vnfd/vnfd_container.yaml: Alloy Generator - generation...
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Alloy/vnfd_container.als opened.
+[31m[ERROR] ./vnfd/vnfd_container.yaml@17,13:topology_template:groups:scaling_group_cont:type: tosca.groups.Scaling undefined![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@20,9:topology_template:groups:scaling_group_cont:properties: property 'min_instances' unknown![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@21,9:topology_template:groups:scaling_group_cont:properties: property 'max_instances' unknown![0m
+[ERROR] [31m'tosca_groups_Scaling'[0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@3,5:imports[0]: ../../types/etsi_nfv_sol001_common_types.yaml: No such file: etsi_nfv_sol001_common_types.yaml![0m
+[31m[ERROR] ./vnfd/vnfd_container.yaml@4,5:imports[1]: ../../types/etsi_nfv_sol001_vnfd_types.yaml: No such file: etsi_nfv_sol001_vnfd_types.yaml![0m
+[Info] ./vnfd/vnfd_container.yaml: Alloy Generator - generation done.
+[Info] ./vnfd/vnfd_container.yaml: UML2 Diagram Generator - generation...
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_container-uml2-component-diagram1.plantuml opened.
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_container-uml2-component-diagram2.plantuml opened.
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_container-uml2-deployment-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_container-declarative_deploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_container-declarative_undeploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_container-parallel_deploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_container-parallel_undeploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_container.yaml: UML2 Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_container.yaml: Network Diagram Generator - generation...
+[Info] ./vnfd/vnfd_container.yaml: No network diagram generated.
+[Info] ./vnfd/vnfd_container.yaml: Network Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_container.yaml: TOSCA Diagram Generator - generation...
+[Info] ./vnfd/vnfd_container.yaml: RESULTS-2025-12-11_00-26-05/ToscaDiagrams/vnfd_container.dot opened.
+[Info] ./vnfd/vnfd_container.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_container.yaml: HOT Generator - generation...
+[Info] ./vnfd/vnfd_container.yaml: HOT Generator - generation done.
+
+[0;35m    ./VNFD/VNFD_VM2.YAML [m
+Translate ./vnfd/vnfd_vm2.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./vnfd/vnfd_vm2.yaml: TOSCA syntax checking
+[Info] ./vnfd/vnfd_vm2.yaml: No service template catalog to load.
+[Info] ./vnfd/vnfd_vm2.yaml: TOSCA type checking...
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@3,5:imports[0]:file: ../../types/etsi_nfv_sol001_common_types.yaml - file not found![0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@4,5:imports[1]:file: ../../types/etsi_nfv_sol001_vnfd_types.yaml - file not found![0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@17,13:topology_template:groups:scaling_group_vm2:type: tosca.groups.Scaling - undefined type but group type expected![0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@20,9:topology_template:groups:scaling_group_vm2:properties:min_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@21,9:topology_template:groups:scaling_group_vm2:properties:max_instances - undefined in tosca.groups.Scaling![0m
+[Info] ./vnfd/vnfd_vm2.yaml: TOSCA type checking done.
+[Info] ./vnfd/vnfd_vm2.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./vnfd/vnfd_vm2.yaml: - declarative_deploy workflow generated
+[Info] ./vnfd/vnfd_vm2.yaml: - declarative_undeploy workflow generated
+[Info] ./vnfd/vnfd_vm2.yaml: - parallel_deploy workflow generated
+[Info] ./vnfd/vnfd_vm2.yaml: - parallel_undeploy workflow generated
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/DeclarativeWorkflows/vnfd_vm2.yaml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./vnfd/vnfd_vm2.yaml: Alloy Generator - generation...
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Alloy/vnfd_vm2.als opened.
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@17,13:topology_template:groups:scaling_group_vm2:type: tosca.groups.Scaling undefined![0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@20,9:topology_template:groups:scaling_group_vm2:properties: property 'min_instances' unknown![0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@21,9:topology_template:groups:scaling_group_vm2:properties: property 'max_instances' unknown![0m
+[ERROR] [31m'tosca_groups_Scaling'[0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@3,5:imports[0]: ../../types/etsi_nfv_sol001_common_types.yaml: No such file: etsi_nfv_sol001_common_types.yaml![0m
+[31m[ERROR] ./vnfd/vnfd_vm2.yaml@4,5:imports[1]: ../../types/etsi_nfv_sol001_vnfd_types.yaml: No such file: etsi_nfv_sol001_vnfd_types.yaml![0m
+[Info] ./vnfd/vnfd_vm2.yaml: Alloy Generator - generation done.
+[Info] ./vnfd/vnfd_vm2.yaml: UML2 Diagram Generator - generation...
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm2-uml2-component-diagram1.plantuml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm2-uml2-component-diagram2.plantuml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm2-uml2-deployment-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm2-declarative_deploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm2-declarative_undeploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm2-parallel_deploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/vnfd_vm2-parallel_undeploy-workflow-diagram.plantuml opened.
+[Info] ./vnfd/vnfd_vm2.yaml: UML2 Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_vm2.yaml: Network Diagram Generator - generation...
+[Info] ./vnfd/vnfd_vm2.yaml: No network diagram generated.
+[Info] ./vnfd/vnfd_vm2.yaml: Network Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_vm2.yaml: TOSCA Diagram Generator - generation...
+[Info] ./vnfd/vnfd_vm2.yaml: RESULTS-2025-12-11_00-26-05/ToscaDiagrams/vnfd_vm2.dot opened.
+[Info] ./vnfd/vnfd_vm2.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./vnfd/vnfd_vm2.yaml: HOT Generator - generation...
+[Info] ./vnfd/vnfd_vm2.yaml: HOT Generator - generation done.
+
+[0;35m    ./NSD.YAML [m
+Translate ./nsd.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./nsd.yaml: TOSCA syntax checking
+[Info] ./nsd.yaml: No service template catalog to load.
+[Info] ./nsd.yaml: TOSCA type checking...
+[31m[ERROR] ./nsd.yaml@3,5:imports[0]:file: ../../types/etsi_nfv_sol001_common_types.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@4,5:imports[1]:file: ../../types/etsi_nfv_sol001_vnfd_types.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@3,5:imports[0]:file: ../../types/etsi_nfv_sol001_common_types.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@4,5:imports[1]:file: ../../types/etsi_nfv_sol001_vnfd_types.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@3,5:imports[0]:file: ../../types/etsi_nfv_sol001_common_types.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@4,5:imports[1]:file: ../../types/etsi_nfv_sol001_vnfd_types.yaml - file not found![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - descriptor_id required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - descriptor_version required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - provider required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - product_name required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - software_version required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - vnfm_info required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - flavour_id required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@13,7:topology_template:node_templates:vnf_vm1 - flavour_description required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@15,11:topology_template:node_templates:vnf_vm1:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - descriptor_id required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - descriptor_version required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - provider required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - product_name required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - software_version required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - vnfm_info required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - flavour_id required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@18,7:topology_template:node_templates:vnf_vm2 - flavour_description required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@20,11:topology_template:node_templates:vnf_vm2:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - descriptor_id required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - descriptor_version required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - provider required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - product_name required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - software_version required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - vnfm_info required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - flavour_id required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@23,7:topology_template:node_templates:vnf_container - flavour_description required property unassigned![0m
+[31m[ERROR] ./nsd.yaml@25,11:topology_template:node_templates:vnf_container:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd.yaml@28,13:topology_template:node_templates:vl1:type: tosca.nodes.nfv.VL - undefined type but node type expected![0m
+[31m[ERROR] ./nsd.yaml@31,13:topology_template:node_templates:vl2:type: tosca.nodes.nfv.VL - undefined type but node type expected![0m
+[31m[ERROR] ./nsd.yaml@35,13:topology_template:groups:ns_scaling_group:type: tosca.groups.Scaling - undefined type but group type expected![0m
+[31m[ERROR] ./nsd.yaml@38,9:topology_template:groups:ns_scaling_group:properties:min_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./nsd.yaml@39,9:topology_template:groups:ns_scaling_group:properties:max_instances - undefined in tosca.groups.Scaling![0m
+[Info] ./nsd.yaml: TOSCA type checking done.
+[Info] ./nsd.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./nsd.yaml: - declarative_deploy workflow generated
+[Info] ./nsd.yaml: - declarative_undeploy workflow generated
+[Info] ./nsd.yaml: - parallel_deploy workflow generated
+[Info] ./nsd.yaml: - parallel_undeploy workflow generated
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/DeclarativeWorkflows/nsd.yaml opened.
+[Info] ./nsd.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./nsd.yaml: Alloy Generator - generation...
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Alloy/nsd.als opened.
+[31m[ERROR] ./nsd.yaml@28,13:topology_template:node_templates:vl1:type: tosca.nodes.nfv.VL undefined![0m
+[31m[ERROR] ./nsd.yaml@31,13:topology_template:node_templates:vl2:type: tosca.nodes.nfv.VL undefined![0m
+[31m[ERROR] ./nsd.yaml@35,13:topology_template:groups:ns_scaling_group:type: tosca.groups.Scaling undefined![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'descriptor_id' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'descriptor_version' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'provider' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'product_name' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'software_version' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'vnfm_info' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'flavour_id' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm1:properties: property 'flavour_description' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml@15,15:topology_template:node_templates:vnf_vm1:vl - requirement undefined![0m
+[31m[ERROR] ./nsd.yaml@28,7:topology_template:node_templates:vnf_vm1:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'descriptor_id' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'descriptor_version' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'provider' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'product_name' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'software_version' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'vnfm_info' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'flavour_id' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_vm2:properties: property 'flavour_description' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml@20,15:topology_template:node_templates:vnf_vm2:vl - requirement undefined![0m
+[31m[ERROR] ./nsd.yaml@28,7:topology_template:node_templates:vnf_vm2:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'descriptor_id' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'descriptor_version' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'provider' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'product_name' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'software_version' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'vnfm_info' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'flavour_id' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml:topology_template:node_templates:vnf_container:properties: property 'flavour_description' must be set as it is required![0m
+[31m[ERROR] ./nsd.yaml@25,15:topology_template:node_templates:vnf_container:vl - requirement undefined![0m
+[31m[ERROR] ./nsd.yaml@31,7:topology_template:node_templates:vnf_container:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd.yaml@38,9:topology_template:groups:ns_scaling_group:properties: property 'min_instances' unknown![0m
+[31m[ERROR] ./nsd.yaml@39,9:topology_template:groups:ns_scaling_group:properties: property 'max_instances' unknown![0m
+[ERROR] [31m'tosca_nodes_nfv_VL'[0m
+[ERROR] [31m'tosca_nodes_nfv_VL'[0m
+[ERROR] [31m'tosca_groups_Scaling'[0m
+[Info] ./nsd.yaml: Alloy Generator - generation done.
+[Info] ./nsd.yaml: UML2 Diagram Generator - generation...
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-uml2-component-diagram1.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-uml2-component-diagram2.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-uml2-deployment-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-declarative_deploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-declarative_undeploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-parallel_deploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-parallel_undeploy-workflow-diagram.plantuml opened.
+[Info] ./nsd.yaml: UML2 Diagram Generator - generation done.
+[Info] ./nsd.yaml: Network Diagram Generator - generation...
+[Info] ./nsd.yaml: No network diagram generated.
+[Info] ./nsd.yaml: Network Diagram Generator - generation done.
+[Info] ./nsd.yaml: TOSCA Diagram Generator - generation...
+[Info] ./nsd.yaml: RESULTS-2025-12-11_00-26-05/ToscaDiagrams/nsd.dot opened.
+[31m[ERROR] ./nsd.yaml@15,11:vl: capability undefined![0m
+[31m[ERROR] ./nsd.yaml@20,11:vl: capability undefined![0m
+[31m[ERROR] ./nsd.yaml@25,11:vl: capability undefined![0m
+[Info] ./nsd.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./nsd.yaml: HOT Generator - generation...
+[Info] ./nsd.yaml: HOT Generator - generation done.
+
+[0;35m    ./NSD/RESULTS-2025-12-11_00-18-08/DECLARATIVEWORKFLOWS/NSD.YAML [m
+Translate ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml...
+[INFO] tosca2cloudnet.yaml loaded.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: TOSCA syntax checking
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: No service template catalog to load.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: TOSCA type checking...
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@2,3:imports[0]:file: ../vnfd/vnfd_vm1.yaml - file not found![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@3,3:imports[1]:file: ../vnfd/vnfd_vm2.yaml - file not found![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@4,3:imports[2]:file: ../vnfd/vnfd_container.yaml - file not found![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,13:topology_template:node_templates:vl1:type: tosca.nodes.nfv.VL - undefined type but node type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@20,13:topology_template:node_templates:vl2:type: tosca.nodes.nfv.VL - undefined type but node type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@24,13:topology_template:node_templates:vnf_container:type: tosca.nodes.nfv.VNF - undefined type but node type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@23,9:topology_template:node_templates:vnf_container:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@28,13:topology_template:node_templates:vnf_vm1:type: tosca.nodes.nfv.VNF - undefined type but node type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@27,9:topology_template:node_templates:vnf_vm1:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@32,13:topology_template:node_templates:vnf_vm2:type: tosca.nodes.nfv.VNF - undefined type but node type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@31,9:topology_template:node_templates:vnf_vm2:requirements[0]:vl - undefined in tosca.nodes.nfv.VNF![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@15,13:topology_template:groups:ns_scaling_group:type: tosca.groups.Scaling - undefined type but group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@13,9:topology_template:groups:ns_scaling_group:properties:max_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@14,9:topology_template:groups:ns_scaling_group:properties:min_instances - undefined in tosca.groups.Scaling![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,13:topology_template:workflows:declarative_deploy:steps:deploy_vl1:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@20,13:topology_template:workflows:declarative_deploy:steps:deploy_vl2:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@24,13:topology_template:workflows:declarative_deploy:steps:deploy_vnf_container:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@28,13:topology_template:workflows:declarative_deploy:steps:deploy_vnf_vm1:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@32,13:topology_template:workflows:declarative_deploy:steps:deploy_vnf_vm2:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,13:topology_template:workflows:declarative_undeploy:steps:undeploy_vl1:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@20,13:topology_template:workflows:declarative_undeploy:steps:undeploy_vl2:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@24,13:topology_template:workflows:declarative_undeploy:steps:undeploy_vnf_container:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@28,13:topology_template:workflows:declarative_undeploy:steps:undeploy_vnf_vm1:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@32,13:topology_template:workflows:declarative_undeploy:steps:undeploy_vnf_vm2:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,13:topology_template:workflows:parallel_deploy:steps:deploy_vl1:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@20,13:topology_template:workflows:parallel_deploy:steps:deploy_vl2:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@24,13:topology_template:workflows:parallel_deploy:steps:deploy_vnf_container:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@28,13:topology_template:workflows:parallel_deploy:steps:deploy_vnf_vm1:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@32,13:topology_template:workflows:parallel_deploy:steps:deploy_vnf_vm2:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,13:topology_template:workflows:parallel_undeploy:steps:undeploy_vl1:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@20,13:topology_template:workflows:parallel_undeploy:steps:undeploy_vl2:type: tosca.nodes.nfv.VL - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@24,13:topology_template:workflows:parallel_undeploy:steps:undeploy_vnf_container:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@28,13:topology_template:workflows:parallel_undeploy:steps:undeploy_vnf_vm1:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@32,13:topology_template:workflows:parallel_undeploy:steps:undeploy_vnf_vm2:type: tosca.nodes.nfv.VNF - undefined type but node or group type expected![0m
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: TOSCA type checking done.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: TOSCA Declarative Workflow Generator - generation...
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: - declarative_deploy workflow generated
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: - declarative_undeploy workflow generated
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: - parallel_deploy workflow generated
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: - parallel_undeploy workflow generated
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/DeclarativeWorkflows/nsd.yaml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: TOSCA Declarative Workflow Generator - generation done.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: Alloy Generator - generation...
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Alloy/nsd.als opened.
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,13:topology_template:node_templates:vl1:type: tosca.nodes.nfv.VL undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@20,13:topology_template:node_templates:vl2:type: tosca.nodes.nfv.VL undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@24,13:topology_template:node_templates:vnf_container:type: tosca.nodes.nfv.VNF undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@28,13:topology_template:node_templates:vnf_vm1:type: tosca.nodes.nfv.VNF undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@32,13:topology_template:node_templates:vnf_vm2:type: tosca.nodes.nfv.VNF undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@15,13:topology_template:groups:ns_scaling_group:type: tosca.groups.Scaling undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@23,13:topology_template:node_templates:vnf_container:vl - requirement undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@20,7:topology_template:node_templates:vnf_container:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@27,13:topology_template:node_templates:vnf_vm1:vl - requirement undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,7:topology_template:node_templates:vnf_vm1:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@31,13:topology_template:node_templates:vnf_vm2:vl - requirement undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@18,7:topology_template:node_templates:vnf_vm2:requirements:vl: capability of type unknown not found in tosca.nodes.nfv.VL![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@13,9:topology_template:groups:ns_scaling_group:properties: property 'max_instances' unknown![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@14,9:topology_template:groups:ns_scaling_group:properties: property 'min_instances' unknown![0m
+[ERROR] [31m'tosca_nodes_nfv_VL'[0m
+[ERROR] [31m'tosca_nodes_nfv_VL'[0m
+[ERROR] [31m'tosca_nodes_nfv_VNF'[0m
+[ERROR] [31m'tosca_nodes_nfv_VNF'[0m
+[ERROR] [31m'tosca_nodes_nfv_VNF'[0m
+[ERROR] [31m'tosca_groups_Scaling'[0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@2,3:imports[0]: ../vnfd/vnfd_vm1.yaml: No such file: vnfd_vm1.yaml![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@3,3:imports[1]: ../vnfd/vnfd_vm2.yaml: No such file: vnfd_vm2.yaml![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@4,3:imports[2]: ../vnfd/vnfd_container.yaml: No such file: vnfd_container.yaml![0m
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: Alloy Generator - generation done.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: UML2 Diagram Generator - generation...
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-uml2-component-diagram1.plantuml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-uml2-component-diagram2.plantuml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-uml2-deployment-diagram.plantuml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-declarative_deploy-workflow-diagram.plantuml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-declarative_undeploy-workflow-diagram.plantuml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-parallel_deploy-workflow-diagram.plantuml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/Uml2Diagrams/nsd-parallel_undeploy-workflow-diagram.plantuml opened.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: UML2 Diagram Generator - generation done.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: Network Diagram Generator - generation...
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: No network diagram generated.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: Network Diagram Generator - generation done.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: TOSCA Diagram Generator - generation...
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: RESULTS-2025-12-11_00-26-05/ToscaDiagrams/nsd.dot opened.
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@23,9:vl: capability undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@27,9:vl: capability undefined![0m
+[31m[ERROR] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml@31,9:vl: capability undefined![0m
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: TOSCA Diagram Generator - generation done.
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: HOT Generator - generation...
+[Info] ./nsd/RESULTS-2025-12-11_00-18-08/DeclarativeWorkflows/nsd.yaml: HOT Generator - generation done.

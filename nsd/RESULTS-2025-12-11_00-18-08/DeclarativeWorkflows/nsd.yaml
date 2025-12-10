@@ -1,0 +1,126 @@
+imports:
+- ../vnfd/vnfd_vm1.yaml
+- ../vnfd/vnfd_vm2.yaml
+- ../vnfd/vnfd_container.yaml
+topology_template:
+  groups:
+    ns_scaling_group:
+      members:
+      - vnf_vm1
+      - vnf_vm2
+      - vnf_container
+      properties:
+        max_instances: 2
+        min_instances: 1
+      type: tosca.groups.Scaling
+  node_templates:
+    vl1:
+      type: tosca.nodes.nfv.VL
+    vl2:
+      type: tosca.nodes.nfv.VL
+    vnf_container:
+      requirements:
+      - vl: vl2
+      type: tosca.nodes.nfv.VNF
+    vnf_vm1:
+      requirements:
+      - vl: vl1
+      type: tosca.nodes.nfv.VNF
+    vnf_vm2:
+      requirements:
+      - vl: vl1
+      type: tosca.nodes.nfv.VNF
+  workflows:
+    declarative_deploy:
+      description: Deployment declarative workflow
+      steps:
+        deploy_vl1:
+          activities:
+          - delegate: deploy
+          target: vl1
+        deploy_vl2:
+          activities:
+          - delegate: deploy
+          target: vl2
+        deploy_vnf_container:
+          activities:
+          - delegate: deploy
+          target: vnf_container
+        deploy_vnf_vm1:
+          activities:
+          - delegate: deploy
+          target: vnf_vm1
+        deploy_vnf_vm2:
+          activities:
+          - delegate: deploy
+          target: vnf_vm2
+    declarative_undeploy:
+      description: Undeployment declarative workflow
+      steps:
+        undeploy_vl1:
+          activities:
+          - delegate: undeploy
+          target: vl1
+        undeploy_vl2:
+          activities:
+          - delegate: undeploy
+          target: vl2
+        undeploy_vnf_container:
+          activities:
+          - delegate: undeploy
+          target: vnf_container
+        undeploy_vnf_vm1:
+          activities:
+          - delegate: undeploy
+          target: vnf_vm1
+        undeploy_vnf_vm2:
+          activities:
+          - delegate: undeploy
+          target: vnf_vm2
+    parallel_deploy:
+      description: Parallel deployment declarative workflow
+      steps:
+        deploy_vl1:
+          activities:
+          - delegate: deploy
+          target: vl1
+        deploy_vl2:
+          activities:
+          - delegate: deploy
+          target: vl2
+        deploy_vnf_container:
+          activities:
+          - delegate: deploy
+          target: vnf_container
+        deploy_vnf_vm1:
+          activities:
+          - delegate: deploy
+          target: vnf_vm1
+        deploy_vnf_vm2:
+          activities:
+          - delegate: deploy
+          target: vnf_vm2
+    parallel_undeploy:
+      description: Parallel undeployment declarative workflow
+      steps:
+        undeploy_vl1:
+          activities:
+          - delegate: undeploy
+          target: vl1
+        undeploy_vl2:
+          activities:
+          - delegate: undeploy
+          target: vl2
+        undeploy_vnf_container:
+          activities:
+          - delegate: undeploy
+          target: vnf_container
+        undeploy_vnf_vm1:
+          activities:
+          - delegate: undeploy
+          target: vnf_vm1
+        undeploy_vnf_vm2:
+          activities:
+          - delegate: undeploy
+          target: vnf_vm2
+tosca_definitions_version: tosca_simple_yaml_1_3

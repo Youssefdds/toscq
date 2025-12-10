@@ -1,0 +1,6 @@
+@startuml
+skinparam componentStyle uml2
+allowmixing
+
+component "vm1: VDU" as node_vm1
+@enduml

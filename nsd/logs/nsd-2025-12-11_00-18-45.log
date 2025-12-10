@@ -1,0 +1,8 @@
+
+[0;35m*** Descriptor files syntax checking ***[m
+
+[0;35m    ./NSD.YAML [m
+Translate ./nsd.yaml...
+Unable to find image 'cloudnet/toscaware:latest' locally
+docker: Error response from daemon: pull access denied for cloudnet/toscaware, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.

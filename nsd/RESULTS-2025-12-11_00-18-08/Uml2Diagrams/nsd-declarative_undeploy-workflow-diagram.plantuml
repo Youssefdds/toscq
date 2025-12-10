@@ -1,0 +1,48 @@
+@startuml
+hide empty description
+skinparam shadowing false
+skinparam state {
+  ArrowColor blue
+  BorderColor blue
+  EndColor black
+  StartColor green
+  BackGroundColor<< step >> white
+  BorderColor<< step >> black
+  BackGroundColor<< delegate >> lightgrey
+  BackGroundColor<< set_state >> white
+  BackGroundColor<< call_operation >> lightblue
+  BackGroundColor<< inline >> white
+}
+skinparam ActivityBarColor<<fork>> DarkGreen
+skinparam ActivityBarColor<<join>> DarkOrange
+
+state "undeploy_vnf_vm1" as step_declarative_undeploy_undeploy_vnf_vm1 << step >> {
+  state "vnf_vm1 undeploy" as step_declarative_undeploy_undeploy_vnf_vm1_vnf_vm1_undeploy << delegate >>
+}
+state "undeploy_vnf_vm2" as step_declarative_undeploy_undeploy_vnf_vm2 << step >> {
+  state "vnf_vm2 undeploy" as step_declarative_undeploy_undeploy_vnf_vm2_vnf_vm2_undeploy << delegate >>
+}
+state "undeploy_vnf_container" as step_declarative_undeploy_undeploy_vnf_container << step >> {
+  state "vnf_container undeploy" as step_declarative_undeploy_undeploy_vnf_container_vnf_container_undeploy << delegate >>
+}
+state "undeploy_vl1" as step_declarative_undeploy_undeploy_vl1 << step >> {
+  state "vl1 undeploy" as step_declarative_undeploy_undeploy_vl1_vl1_undeploy << delegate >>
+}
+state "undeploy_vl2" as step_declarative_undeploy_undeploy_vl2 << step >> {
+  state "vl2 undeploy" as step_declarative_undeploy_undeploy_vl2_vl2_undeploy << delegate >>
+}
+state declarative_undeploy_fork <<fork>>
+[*] --> declarative_undeploy_fork
+declarative_undeploy_fork --> step_declarative_undeploy_undeploy_vnf_vm1
+declarative_undeploy_fork --> step_declarative_undeploy_undeploy_vnf_vm2
+declarative_undeploy_fork --> step_declarative_undeploy_undeploy_vnf_container
+declarative_undeploy_fork --> step_declarative_undeploy_undeploy_vl1
+declarative_undeploy_fork --> step_declarative_undeploy_undeploy_vl2
+state declarative_undeploy_join <<join>>
+declarative_undeploy_join --> [*]
+step_declarative_undeploy_undeploy_vnf_vm1 --> declarative_undeploy_join
+step_declarative_undeploy_undeploy_vnf_vm2 --> declarative_undeploy_join
+step_declarative_undeploy_undeploy_vnf_container --> declarative_undeploy_join
+step_declarative_undeploy_undeploy_vl1 --> declarative_undeploy_join
+step_declarative_undeploy_undeploy_vl2 --> declarative_undeploy_join
+@enduml

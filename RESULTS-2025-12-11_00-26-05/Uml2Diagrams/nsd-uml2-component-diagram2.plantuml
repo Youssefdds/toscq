@@ -1,0 +1,29 @@
+@startuml
+skinparam componentStyle uml2
+skinparam component {
+  backgroundColor<<relationship>> White
+}
+
+component "vl1: VL" <<node>> as node_vl1
+
+component "vl2: VL" <<node>> as node_vl2
+
+component "vnf_container: VNF" <<node>> as node_vnf_container
+component ": **<color:orange>UNDEFINED</color>**" <<relationship>> as node_vnf_container_vl_relationship0
+interface " " as node_vnf_container_vl_relationship0_source
+node_vnf_container_vl_relationship0_source -- node_vnf_container_vl_relationship0
+node_vnf_container --( node_vnf_container_vl_relationship0_source : vl
+
+component "vnf_vm1: VNF" <<node>> as node_vnf_vm1
+component ": **<color:orange>UNDEFINED</color>**" <<relationship>> as node_vnf_vm1_vl_relationship0
+interface " " as node_vnf_vm1_vl_relationship0_source
+node_vnf_vm1_vl_relationship0_source -- node_vnf_vm1_vl_relationship0
+node_vnf_vm1 --( node_vnf_vm1_vl_relationship0_source : vl
+
+component "vnf_vm2: VNF" <<node>> as node_vnf_vm2
+component ": **<color:orange>UNDEFINED</color>**" <<relationship>> as node_vnf_vm2_vl_relationship0
+interface " " as node_vnf_vm2_vl_relationship0_source
+node_vnf_vm2_vl_relationship0_source -- node_vnf_vm2_vl_relationship0
+node_vnf_vm2 --( node_vnf_vm2_vl_relationship0_source : vl
+
+@enduml

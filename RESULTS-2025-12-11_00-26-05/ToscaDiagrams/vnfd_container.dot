@@ -1,0 +1,21 @@
+graph ToscaDiagram {
+  rankdir="LR"
+    subgraph clusterpodA {
+      color=white
+      label=""
+      podA[label="podA: Application|\l\l\l\l" shape=record style=rounded]
+      podA_requirement_host[label="host" shape=cds style=filled fillcolor=turquoise]
+      podA -- podA_requirement_host
+      podA_requirement_network[label="network" shape=cds style=filled fillcolor=turquoise]
+      podA -- podA_requirement_network
+    }
+    subgraph clusterpodB {
+      color=white
+      label=""
+      podB[label="podB: Application|\l\l\l\l" shape=record style=rounded]
+      podB_requirement_host[label="host" shape=cds style=filled fillcolor=turquoise]
+      podB -- podB_requirement_host
+      podB_requirement_network[label="network" shape=cds style=filled fillcolor=turquoise]
+      podB -- podB_requirement_network
+    }
+}

@@ -1,0 +1,13 @@
+@startuml
+skinparam componentStyle uml2
+allowmixing
+
+component "vnf_vm1: VNF" as node_vnf_vm1
+component "vnf_vm2: VNF" as node_vnf_vm2
+component "vnf_container: VNF" as node_vnf_container
+component "vl1: VL" as node_vl1
+component "vl2: VL" as node_vl2
+node_vnf_vm1 ..> node_vl1 : <<**<color:orange>UNDEFINED</color>**>>
+node_vnf_vm2 ..> node_vl1 : <<**<color:orange>UNDEFINED</color>**>>
+node_vnf_container ..> node_vl2 : <<**<color:orange>UNDEFINED</color>**>>
+@enduml
